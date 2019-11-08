@@ -1,0 +1,42 @@
+{
+  "name": "api-for-smart-contracts",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-gyp": "^6.0.1",
+    "rebuild": "^0.1.2",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.2.2",
+    "windows-build-tools": "^5.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/polyfill": "^7.7.0",
+    "nodemon": "^1.19.2"
+  },
+  "scripts": {
+    "start": "nodemon --watch src --exec babel-node -- src/index.js",
+    "lint-me": "eslint .",
+    "babel-node": "babel-node",
+    "build": "babel src -d dist --presets @babel/env",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boivlad/API-for-Smart-Contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boivlad/API-for-Smart-Contracts/issues"
+  },
+  "homepage": "https://github.com/boivlad/API-for-Smart-Contracts#readme",
+  "keywords": [],
+  "description": ""
+}
