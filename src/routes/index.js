@@ -1,1 +1,1 @@
-export {default as market} from "./market";
+export { default as market } from "./market";
