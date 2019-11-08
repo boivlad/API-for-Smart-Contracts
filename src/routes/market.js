@@ -3,7 +3,6 @@ import { market } from '../models/market';
 import { config } from "../config";
 
 const router = express.Router();
-// console.dir(market.options.jsonInterface);
 router.post('/create', async (req, res) => {
 	const {
 		name,
