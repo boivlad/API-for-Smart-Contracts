@@ -1,7 +1,7 @@
-import "@babel/polyfill";
-import express from "express";
+import '@babel/polyfill';
+import express from 'express';
 import { config } from './config';
-import { market } from "./routes";
+import { market } from './routes';
 
 const app = express();
 app.use(express.json());
