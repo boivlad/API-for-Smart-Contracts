@@ -11,13 +11,16 @@ router.post('/create', async (req, res) => {
 		price,
 		shares,
 	} = req.body;
+	try{
+		let result = await market.methods.createProject(name, description, price, shares).send( { 
+			from: config.ropsten.walletAddress,
+		});
+		res.json({ 'Token': name, 'Hash': result.transactionHash });
+	}catch(err){
+		res.json({ message: 'Transaction Error' });
+	}
 	
-	await market.methods.createProject(name, description, price, shares).send( { 
-		from: config.ropsten.walletAddress,
-	}, 
-	(error, transactionHash) => {
-		res.json({ 'Token': name, 'Hash': transactionHash });
-	});
+	
 });
 
 router.get('/:name/address', async (req, res) => {
