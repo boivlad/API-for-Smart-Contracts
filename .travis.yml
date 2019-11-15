@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - "node"
-start:
-  -npm start
-install:
-  - npm install
-  
-script: 'true'
